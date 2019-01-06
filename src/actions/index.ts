@@ -1,22 +1,6 @@
-let nextTodoId = 0;
-export const addTodo = (text: string) => ({
-    type: 'ADD_TODO',
-    id: nextTodoId++,
-    text
-});
-
-export const setVisibilityFilter = (filter: any) => ({
-    type: 'SET_VISIBILITY_FILTER',
-    filter
-});
-
-export const toggleTodo = (id: string) => ({
-    type: 'TOGGLE_TODO',
-    id
-});
-
-export const VisibilityFilters = {
-    SHOW_ALL: 'SHOW_ALL',
-    SHOW_COMPLETED: 'SHOW_COMPLETED',
-    SHOW_ACTIVE: 'SHOW_ACTIVE'
-};
+export enum ActionTypes {
+    ADD_TODO = 'ADD_TODO',
+    TOGGLE_TODO = 'TOGGLE_TODO',
+    SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER',
+    NEW_PROJECT = 'NEW_PROJECT',
+}

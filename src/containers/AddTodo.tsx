@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addTodo } from '../actions';
+import { addTodo } from '../actions/todos';
+import { newProject } from '../actions/project';
 
 const AddTodo = ({ dispatch }: any) => {
     let input: any;
-
+    dispatch(newProject('mynew project :)'))
     return (
         <div>
             <form
