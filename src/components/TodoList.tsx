@@ -1,21 +1,16 @@
 import React from 'react';
-import Todo from './Todo';
-
-type Todo = {
-    id: string;
-    completed: boolean;
-    text: string;
-};
+import TodoItem from './Todo';
+import { Todo } from '../actions/todos';
 
 interface ITodoListProps {
     todos: Todo[];
-    toggleTodo: any;
+    toggleTodo: (id: string) => void;
 }
 
 const TodoList = ({ todos, toggleTodo }: ITodoListProps) => (
     <ul>
         {todos.map(todo => (
-            <Todo key={todo.id} {...todo} onClick={() => toggleTodo(todo.id)} />
+            <TodoItem key={todo.id} {...todo} onClick={() => toggleTodo(todo.id)} />
         ))}
     </ul>
 );

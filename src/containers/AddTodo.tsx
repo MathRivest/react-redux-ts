@@ -1,9 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect, DispatchProp } from 'react-redux';
 import { addTodo } from '../actions/todos';
 import { newProject } from '../actions/project';
 
-const AddTodo = ({ dispatch }: any) => {
+const AddTodo = ({ dispatch }: DispatchProp) => {
     let input: any;
     dispatch(newProject('mynew project :)'))
     return (

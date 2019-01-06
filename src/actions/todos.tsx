@@ -2,6 +2,12 @@ import { makeActionCreator } from './actionCreator';
 import { ActionTypes } from '.';
 import uuid from 'uuid';
 
+export type Todo = {
+    id: string;
+    completed: boolean;
+    text: string;
+};
+
 type addTodoPayload = {
     id: string;
     text: string;
